@@ -42,9 +42,12 @@ outTime="$outBase.time"
 echo "==Partially preprocessing $inp"
 echo $partialPreprocFlags
 
-bash -c "time ../TypeChef/typechef.sh \
+cmdline="../TypeChef/typechef.sh \
   $(for arg in $partialPreprocFlags "$@"; do echo -n "\"$arg\" "; done) \
-  '$inp' 2> '$outErr' |tee '$outDbg'" \
+  '$inp' 2> '$outErr' |tee '$outDbg'"
+echo $cmdline
+
+bash -c "time $cmdline" \
   2> "$outTime" || true
 
 cat "$outErr" 1>&2

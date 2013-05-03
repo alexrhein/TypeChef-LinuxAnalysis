@@ -1,0 +1,47 @@
+> CompletedConf.h
+> OpenFeaturesList.txt
+>
+>https://github.com/ckaestne/TypeChef-LinuxAnalysis/blob/master/src/main/scala/de/fosd/typechef/linux/CompletePartialConfiguration.scala
+>
+>Nimmt das Feature-Modell und berechnet alle Features die nicht konfigurierbar und die noch offen sind als Optimierung. Dauert eine Weile das zu berechnen (1-2h).
+>
+Generierung mit:
+	/local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis$ ./run.sh de.fosd.typechef.linux.CompletePartialConfiguration outFolder 
+	Erzeugt "completedConf.h" und "openFeaturesList.txt" in Ordner "outFolder"
+>
+>> approx.fm
+>
+>manuell erstellt mit Constraints aus dem Feature-Modell.
+>wir statt dem kompletten featuremodell beim parsen verwendet als approximation, weils sehr viel schneller geht so.
+>kann man auch weglassen, aber dann wirds langsamer.
+>
+Habe erstmal alles bis auf OneOf(64,32) gelöscht.
+
+>> linux_2.6.33.3_pcs.txt
+>
+>das ist die liste mit presence conditions per file, die mit Thorsten's tool extrahiert wird. daraus werden dann mit
+>https://github.com/ckaestne/TypeChef-LinuxAnalysis/blob/master/src/main/scala/de/fosd/typechef/linux/ProcessFileList.scala
+>die ganzen .pc dateien erstellt
+>
+Habe linux_3.4_pcs.txt; habe mit prepareLinuxTestCase die pc Dateien (gab Probleme; Commandline selbst ausführen geht).
+./run.sh de.fosd.typechef.linux.ProcessFileList linux_3.4_pcs.txt --workingDir l/ --openFeatureList openFeaturesList.txt
+
+>> partialconf.h
+>
+>nicht-boolsche konfigurationsoptionen
+>manuell erstellt
+>
+>https://github.com/ckaestne/TypeChef-LinuxAnalysis/blob/master/src/main/scala/de/fosd/typechef/linux/KConfigReader.scala
+>
+>kann das zwar teilweise extrahieren, aber das ist ungenau und nicht automatisiert.
+>
+KConfigReader wird für einzelne KConfig-Dateien benutzt (kann keine KConfig-Includes).
+
+>
+>
+>alle dateien bis hier werden verwendet, sorry.
+>
+>
+>> x86.model
+>
+>mit undertaker generiert. wir nur fuer debugging benutzt, sonst nicht. 

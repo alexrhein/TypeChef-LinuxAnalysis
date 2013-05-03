@@ -1,3 +1,17 @@
+
+// sollte nicht hier definiert werden #define CONFIG_X86_32
+
+#ifdef CONFIG_SMP
+#define CONFIG_NR_CPUS 8
+#else
+#define CONFIG_NR_CPUS 1
+#endif
+
+
+#define CONFIG_SPLIT_PTLOCK_CPUS 4
+
+
+// uebernommen aus original partialConf.h
 #ifdef CONFIG_SMP
 #define CONFIG_NR_CPUS 8
 #else

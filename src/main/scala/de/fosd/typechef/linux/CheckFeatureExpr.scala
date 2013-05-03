@@ -38,6 +38,7 @@ object CheckFeatureExpr extends App {
         val slicedFExpr = undertakerFMgen.sliceModel(fexpr)
         assert(slicedFExpr.isSatisfiable(), "fm " + slicedFExpr + " is not satisfiable")
         println("Undertaker: " + status(slicedFExpr and fexpr, NoFeatureModel))
+
         //
         //
         //            val features = fexpr.collectDistinctFeatures

@@ -11,7 +11,7 @@ package de.fosd.typechef.linux
 object LinuxSettings {
 
     val partialConfFile = "partialConf.h"
-    val featureModelFile = "2.6.33.3-2var.dimacs"
+    val featureModelFile = "3.4var.dimacs"
     val openFeatureList = "openFeaturesList.txt"
 
     val pathToLinuxSource = "l"

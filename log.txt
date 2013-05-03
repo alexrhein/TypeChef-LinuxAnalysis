@@ -1,0 +1,167 @@
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/crypto/aes_glue.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+3466;12952;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/crypto/crc32c-intel.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4255;17835;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/crypto/salsa20_glue.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+3854;18021;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/crypto/twofish_glue.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+3419;13881;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/acpi/boot.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	failed: found "*", but expected "__typeof__" at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/include/linux/export.h:692933:48 (List())
+
+True	failed: found "*", but expected "__typeof__" at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/include/linux/export.h:692933:48 (List())
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+6712;20796;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/acpi/cstate.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4384;21140;0;0;0
+Skipping /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/acpi/sleep.c
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/alternative.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4198;19066;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/apic.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	failed: found "*", but expected "__typeof__" at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/include/linux/export.h:531452:48 (List())
+
+True	failed: found "*", but expected "__typeof__" at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/include/linux/export.h:531452:48 (List())
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+5047;23501;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/apic_noop.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+3512;13770;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/bigsmp_32.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+!CONFIG_SMP & !CONFIG_NUMA | CONFIG_SMP	succeeded
+
+!CONFIG_SMP & CONFIG_NUMA	failed: end of input expected at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/include/linux/percpu-defs.h:133719:106 (List())
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+3510;15976;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/io_apic.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4703;23264;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/ipi.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+!CONFIG_X86_64_SMP | CONFIG_X86_64_SMP & !CONFIG_DEBUG_PREEMPT & CONFIG_X86_32_SMP | CONFIG_X86_64_SMP & CONFIG_DEBUG_PREEMPT	succeeded
+
+CONFIG_X86_64_SMP & !CONFIG_DEBUG_PREEMPT & !CONFIG_X86_32_SMP	failed: end of input expected at file /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/ipi.c:467274:0 (List())
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4923;22101;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/nmi.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+Invocation error: File not found /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apic/nmi.c
+use parameter --help for more information.
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/apm_32.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.
+True	succeeded
+
+timing (lexer, parser, type system, interface inference, conditional control flow)
+4594;19872;0;0;0
+==Partially preprocessing /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/linux-3.4/arch/x86/kernel/bootflag.c
+-c linux-redhat.properties --bdd -x CONFIG_ --parse --featureModelFExpr approx.fm --typeSystemFeatureModelDimacs=3.4var.dimacs --include=completedConf.h --include=partialConf.h --openFeat openFeaturesList.txt --writePI --recordTiming --lexdebug --errorXML
+preIncludes: ArraySeq()
+systemIncludes: 
+postIncludes: List(usr/include, usr/lib/gcc/x86_64-redhat-linux/4.4.4/include)
+Could not load BDD package buddy: Can't load library: /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/libbuddy.so
+parsing.

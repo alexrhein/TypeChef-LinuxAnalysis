@@ -8,7 +8,7 @@
 ##################################################################
 #srcPath=linux-2.6.33.3
 # XXX:$PWD/ makes the path absolute, it is needed for some stupid bug!
-srcPath=$PWD/l
+srcPath=$PWD/linux-3.4
 
 ##################################################################
 # List of files to preprocess
@@ -21,16 +21,18 @@ filesToProcess() {
 
 # Note: this clears $partialPreprocFlags
 #partialPreprocFlags="-c linux-redhat.properties -I $(gcc -print-file-name=include) -x CONFIG_ -U __INTEL_COMPILER \
-system=linux-redhat
+
 partialPreprocFlags="--bdd -x CONFIG_ \
-  --xtc
+  --parse \
+  --typecheck \
   --featureModelFExpr approx.fm \
-  --typeSystemFeatureModelDimacs=2.6.33.3-2var.dimacs \
+  --typeSystemFeatureModelDimacs=3.4var.dimacs \
   --include=completedConf.h --include=partialConf.h \
-  -c $system.properties \
   --openFeat openFeaturesList.txt \
   --writePI --recordTiming --lexdebug --errorXML --interface"
 
+system=linux-redhat
+partialPreprocFlags="-c $system.properties $partialPreprocFlags"
 
 #  --typeSystemFeatureModelDimacs=2.6.33.3-2var.dimacs \
 #  --include linux_defs.h --include $srcPath/include/generated/autoconf.h
@@ -121,7 +123,7 @@ flags() {
   fi
   # XXX: again, I need to specify $PWD, for the same bug as above.
   # "-I linux-2.6.33.3/include -I linux-2.6.33.3/arch/x86/include"
-  echo "$extraFlag -I $srcPath/include -I $srcPath/arch/x86/include -D __KERNEL__ -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DKBUILD_BASENAME=\"\\\"$base\\\"\" -DKBUILD_MODNAME=\"\\\"$base\\\"\""
+  echo "$extraFlag -I $srcPath/include -I $srcPath/arch/x86/include/generated -I $srcPath/arch/x86/include -D __KERNEL__ -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DKBUILD_BASENAME=\"\\\"$base\\\"\" -DKBUILD_MODNAME=\"\\\"$base\\\"\""
 }
 
 export outCSV=linux.csv
@@ -133,8 +135,8 @@ export outCSV=linux.csv
 # Actually invoke the preprocessor and analyze result.
 ##################################################################
 filesToProcess|while read i; do
+  extraFlags="$(flags "$i")"
   if [ ! -f $srcPath/$i.dbg ]; then
-    extraFlags="$(flags "$i")"
     touch $srcPath/$i.dbg
     . ./jcpp.sh $srcPath/$i.c $extraFlags
   else
