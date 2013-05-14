@@ -136,12 +136,12 @@ export outCSV=linux.csv
 ##################################################################
 filesToProcess|while read i; do
   extraFlags="$(flags "$i")"
-  if [ ! -f $srcPath/$i.dbg ]; then
+  #if [ ! -f $srcPath/$i.dbg ]; then
     touch $srcPath/$i.dbg
     . ./jcpp.sh $srcPath/$i.c $extraFlags
-  else
-    echo "Skipping $srcPath/$i.c"
-  fi
+  #else
+  #  echo "Skipping $srcPath/$i.c"
+  #fi
 done
 
 # The original invocation of the compiler:
