@@ -35,5 +35,5 @@ if [ ! -d systems/redhat ]; then
 fi
 
 cd $CURPATH
-java -jar ../TypeChef/sbt-launch.jar mkrun
+java -Xmx1024M -Xss32M -XX:MaxPermSize=256M -jar ../TypeChef/sbt-launch.jar mkrun
 ./run.sh de.fosd.typechef.linux.ProcessFileList linux_3.4_pcs.txt --workingDir l/ --openFeatureList openFeaturesList.txt
