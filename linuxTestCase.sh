@@ -115,8 +115,9 @@ flags() {
   elif egrep -q "drivers/media/(dvb|video)/|drivers/staging/cx25821/" <<< "$name"; then
     extraFlag=""
     for path in drivers/media/dvb/dvb-core drivers/media/dvb/frontends drivers/media/common/tuners \
-      drivers/ieee1394 drivers/media/video/bt8xx drivers/media/video; do
+       drivers/media/video/bt8xx drivers/media/video; do
       extraFlag="$extraFlag -I $srcPath/$path"
+      # removed drivers/ieee1394 from list. It seems the folder does not exist in linux 3.4.
     done
   else
     extraFlag=""
