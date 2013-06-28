@@ -17,6 +17,7 @@ if [ ! -d $version ]; then
 	done < $patchesPath/series
 fi
 
+cd $version
 make allnoconfig ARCH=x86
 make prepare ARCH=x86
 # Creates include/generated/compile.h needed for init/version.o; the command
@@ -24,6 +25,7 @@ make prepare ARCH=x86
 make SUBDIRS=init ARCH=x86 &> /dev/null
 
 # generates some more header files (e.g. arch/x86/include/generated/asm/unistd_64_x32.h)
+make allnoconfig ARCH=x86_64
 make prepare ARCH=x86_64
 
 cd $CURPATH
