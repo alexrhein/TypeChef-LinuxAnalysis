@@ -23,6 +23,8 @@ make prepare ARCH=x86
 # will give an error which we want to ignore.
 make SUBDIRS=init ARCH=x86 &> /dev/null
 
+# generates some more header files (e.g. arch/x86/include/generated/asm/unistd_64_x32.h)
+make prepare ARCH=x86_64
 
 cd $CURPATH
 if [ ! -d systems/redhat ]; then
