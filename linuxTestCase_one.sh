@@ -25,11 +25,14 @@ filesToProcess() {
 partialPreprocFlags="--bdd -x CONFIG_ \
   --parse \
   --typecheck \
+  --ifdeftoif \
   --featureModelFExpr approx.fm \
   --typeSystemFeatureModelDimacs=3.4var.dimacs \
   --include=completedConf.h --include=partialConf.h \
   --openFeat openFeaturesList.txt \
-  --writePI --recordTiming --lexdebug --errorXML --interface"
+  --adjustLines \
+  --writePI --recordTiming --lexdebug --errorXML --interface
+  -I /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/LDV-Header"
 
 system=linux-redhat
 partialPreprocFlags="-c $system.properties $partialPreprocFlags"
@@ -115,7 +118,8 @@ flags() {
   elif egrep -q "drivers/media/(dvb|video)/|drivers/staging/cx25821/" <<< "$name"; then
     extraFlag=""
     for path in drivers/media/dvb/dvb-core drivers/media/dvb/frontends drivers/media/common/tuners \
-       drivers/media/video/bt8xx drivers/media/video; do
+       drivers/media/video/bt8xx drivers/media/video include/config/dvb; do
+# alex: attached include/config/dvb because inlcude not found in drivers/media/dvb/ddbridge/ddbridge-core.c
       extraFlag="$extraFlag -I $srcPath/$path"
       # removed drivers/ieee1394 from list. It seems the folder does not exist in linux 3.4.
     done
