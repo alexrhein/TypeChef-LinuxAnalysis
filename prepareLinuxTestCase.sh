@@ -9,12 +9,17 @@ if [ ! -d $version ]; then
 	fi
 	tar xjf $tarball
 
+	ln -s $version l
+	
 	cd $version
 
 	patchesPath=../linux-2.6.33.3-patches
 	while read i; do
 	  patch -p1 -i $patchesPath/$i
 	done < $patchesPath/series
+	
+	#so we can cd to $version again in next line
+	cd ../
 fi
 
 cd $version

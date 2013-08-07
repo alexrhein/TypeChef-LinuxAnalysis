@@ -32,7 +32,7 @@ partialPreprocFlags="--bdd -x CONFIG_ \
   --openFeat openFeaturesList.txt \
   --adjustLines \
   --writePI --recordTiming --lexdebug --errorXML --interface
-  -I /local/TypeChef-Linux34-Analysis/TypeChef-LinuxAnalysis/LDV-Header"
+  -I $PWD/LDV-Header"
 
 system=linux-redhat
 partialPreprocFlags="-c $system.properties $partialPreprocFlags"
