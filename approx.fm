@@ -12,3 +12,7 @@ oneOf(defined(CONFIG_TREE_RCU), defined(CONFIG_TREE_PREEMPT_RCU), defined(CONFIG
 defined(CONFIG_WANT_PAGE_DEBUG_FLAGS) => defined(CONFIG_PAGE_GUARD)
 
 defined(CONFIG_X86_32) => defined(CONFIG_X86_CMPXCHG)
+
+defined(CONFIG_LOCK_STAT) => defined(CONFIG_DEBUG_LOCK_ALLOC)
+
+
