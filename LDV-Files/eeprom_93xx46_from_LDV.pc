@@ -1,0 +1,1 @@
+definedEx(CONFIG_EEPROM_93XX46)
