@@ -21,17 +21,25 @@ filesToProcess() {
   #awk -F: '$1 ~ /.c$/ {print gensub(/\.c$/, "", "", $1)}' < linux_2.6.33.3_pcs.txt
   echo $filename
 }
+#\
+--ifdeftoif \
+--typecheck \
+--dumpcfg \
+ --interface
 
 partialPreprocFlags="--bdd -x CONFIG_ \
   --parse \
   --typecheck \
   --ifdeftoif \
+  --ifdeftoifnocheck \
+  --interface \
+  --recordTiming \
   --featureModelFExpr approx.fm \
   --typeSystemFeatureModelDimacs=3.4var.dimacs \
   --include=completedConf.h --include=partialConf.h \
   --openFeat openFeaturesList.txt \
   --adjustLines \
-  --writePI --recordTiming --lexdebug --errorXML --interface
+  --writePI --recordTiming --lexdebug --errorXML
   -I $PWD/LDV-Header"
 
 system=linux-redhat

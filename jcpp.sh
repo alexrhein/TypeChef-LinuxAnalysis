@@ -4,7 +4,7 @@
 
 #javaOpts='-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
 javaOpts=''
-javaOpts='$javaOpts -Xmx2G -Xms128m -Xss10m'
+javaOpts='$javaOpts -Xmx4G -Xms128m -Xss10m'
 
 # For Java compiled stuff!
 basePath=.
@@ -42,7 +42,11 @@ outTime="$outBase.time"
 echo "==Partially preprocessing $inp"
 echo $partialPreprocFlags
 
-cmdline="../TypeChef/typechef.sh \
+#cmdline="/local/ifdeftoif/TypeChef/typechef.sh \
+#cmdline="../TypeChef/typechef.sh \
+
+
+cmdline="/local/ifdeftoif/TypeChef/typechef.sh \
   $(for arg in $partialPreprocFlags "$@"; do echo -n "\"$arg\" "; done) \
   '$inp' 2> '$outErr' |tee '$outDbg'"
 echo $cmdline
@@ -51,3 +55,4 @@ bash -c "time $cmdline" \
   2> "$outTime" || true
 
 cat "$outErr" 1>&2
+

@@ -1,3 +1,5 @@
+#define LDV_MAIN0_sequence_infinite_withcheck_stateful
+
 #undef CONFIG_MTD_NAND_OMAP2
 #undef CONFIG_SPI_SH_MSIOF
 #undef CONFIG_SND_FSI_DA7210
